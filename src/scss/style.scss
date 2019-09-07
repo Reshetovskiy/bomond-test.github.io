@@ -6,9 +6,10 @@
 @import "partials/icons";
 @import "partials/svg_sprite";
 
-@import "templates/_layouts/_header";
-@import "templates/_layouts/_footer";
+@import "templates/_blocks/style";
 
 @import "components/style";
 
-@import "templates/@home/style";
+@import "templates/_pages/home";
+
+@import "libs/style";

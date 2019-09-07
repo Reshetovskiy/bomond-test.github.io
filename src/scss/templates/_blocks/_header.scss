@@ -1,0 +1,274 @@
+@media #{$sr-320} { 
+    .header {
+        &__wrapper{
+            padding-top: 0;
+            margin-top: 0;
+        }
+        .header__burger {
+            width: 0;
+            height: 0;
+            display: block;
+            z-index: 3;
+            position: absolute;
+            margin-left: 10px;
+        }
+        .header-menu {
+            padding-bottom: 20px;
+            position: absolute;
+            z-index: -1;
+            background-color: rgba(76, 42, 42, 0.8);
+            top: 0;
+            width: 0;
+            height: 0;
+            opacity: 0;
+            border-radius: 100%;
+            transition-duration: .5s;
+            flex-direction: column;
+            &--active {
+                z-index: 2;
+                width: 100%;
+                height: 100%;
+                opacity: 1;
+                border-radius: 0;
+            }
+            &__item {
+                margin: 10px 0;
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+
+@media #{$sr-768} { 
+    .header {
+        &__wrapper{
+            padding-top: 0;
+            margin-top: 0;
+        }
+        .header__burger {
+            width: 0;
+            height: 0;
+            display: block;
+            z-index: 3;
+            position: absolute;
+            margin-left: 10px;
+        }
+        .header-menu {
+            padding-bottom: 20px;
+            position: absolute;
+            top: 0;
+            z-index: -1;
+            background-color: rgba(76, 42, 42, 0.8);
+            width: 0;
+            height: 0;
+            opacity: 0;
+            border-radius: 100%;
+            transition-duration: .5s;
+            flex-direction: column;
+            &--active {
+                z-index: 2;
+                width: 100%;
+                height: 100%;
+                opacity: 1;
+                border-radius: 0;
+            }
+            &__item {
+                margin: 10px 0;
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+} 
+
+.header {
+    position: relative;
+    overflow: hidden; 
+    background: url('../img/garlands-top.png') no-repeat bottom;
+    background-position-y: 102%;
+    &__wrapper {
+        padding-top: 12px;
+        background-image: url('../img/people.png');
+        background-repeat: no-repeat;
+        background-position-y: 120px;
+        background-position-x: center;
+        min-height: 1140px;
+    }
+    &__frame {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        z-index: -1;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 1040px;
+        margin: 180px auto 0 auto;
+    }
+    &__burger {
+        display: none;
+        height: 55px;
+        width: 55px;
+        min-height: 55px;
+        min-width: 55px;
+        background: transparent;
+        border: 1px solid #fff;
+        border-radius: 4px;
+    }
+    &__burger-line {
+        width: 30px;
+        height: 2px;
+        background-color: #fff;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        &:after, 
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 30px;
+            height: 2px;
+            background-color: #fff;
+        }
+        &:after {
+            top: 10px;
+        }
+        &:before {
+            top: -10px;
+        }
+    }
+}
+ 
+.header-menu {
+    text-transform: uppercase;
+    @include flex_center;
+    &__item {
+        margin: 0 19px;
+        &:first-child {
+            margin-left: 15%;
+        }
+        &--tickets {
+            display: flex;
+            align-items: center;
+            height: 34px;
+            color: #000;
+            margin-left: 40px;
+            padding: 0 25px;
+            letter-spacing: 0.4px;
+            border-radius: 5px;
+            background-color: #ffc107;
+            cursor: pointer;
+        }
+        &--lang {
+            position: absolute;
+            right: 30px;
+        }
+    }
+    &__link {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+        transition-duration: .4s;
+        position: relative;
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            width: 0;
+            height: 1px;
+            background-color: rgb(201, 201, 201);
+            transition-duration: .3s;
+        }
+        &:hover {
+            color: rgb(201, 201, 201);
+            &:after {
+                width: 100%;
+            }
+        }
+        &--logo {
+            &:after {
+                display: none;
+            }
+        }
+        &--yellow {
+            font-weight: 600;
+            color: #333;
+            &:after {
+                display: none;
+            }
+            &:hover {
+                color: rgb(7, 0, 0);
+            }
+        }
+    }
+}
+
+.advertisement-title {
+    font-family: 'jikharev';
+    letter-spacing: -11.55px;
+    line-height: 125.41px;
+    font-size: 290px;
+    font-style: italic;
+    color: #fff;
+    transform: rotate(-3deg);
+    text-align: center;
+    text-shadow:
+    1px 1px 0px #4c0400,
+    2px 2px 0px #4c0400,
+    3px 3px 0px #4c0400,
+    4px 4px 0px #4c0400,
+    5px 5px 0px #4c0400,
+    6px 6px 0px #4c0400,
+    7px 7px 0px #4c0400,
+    8px 8px 0px #4c0400,
+    9px 9px 0px #4c0400,
+    10px 10px 0px #4c0400,
+    15px 15px 25px #5c0b07;
+    transition: .5s ease-in-out;
+    &__yellow {
+        font-family: 'bebas';
+        color: #ffcc00;
+        font-size: 130px;
+        letter-spacing: -4px;
+        line-height: 149.33px;
+        display: block;
+        transform: rotate(-1deg);
+    }
+    &__year {
+        font-family: 'bebas';
+        line-height: 0;
+        font-size: 93px;
+        display: block;
+        margin-left: auto;
+        margin-right: 180px;
+        letter-spacing: -6px;
+        width: fit-content;
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.nav-list {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    font-size: 36px;
+    text-transform: uppercase;
+    font-family: 'chunk';
+    &__link {
+        color: #fff;
+    }
+    &__item {
+        margin-bottom: 10px;
+    }
+}
+

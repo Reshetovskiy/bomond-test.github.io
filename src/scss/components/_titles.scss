@@ -1,0 +1,75 @@
+.title {
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    color: #ffffff;
+    font-size: 48px;
+    font-family: 'chunk';
+    max-width: 730px;
+    &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 2px;
+        width: 100%;
+        background-color: #ffffff;
+        border-radius: 70%;
+    }
+    &--black {
+        max-width: 850px;
+        color: #333333;
+        &:after {
+            background-color: #b42520;
+        }
+    }
+}
+
+.title-big {
+    font-family: "chunk";
+    text-align: center;
+    font-size: 95px;
+    font-weight: 400;
+    line-height: 100px;
+    text-transform: uppercase;
+    color: #b7251c;
+    &--yellow {
+        color: #ffcc00;
+    }
+
+}
+
+.title-small {
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+    font-size: 36px;
+    font-family: 'chunk';
+    width: 730px;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+
+
+@media #{$sr-768} {
+    .title-big {
+        font-size: 70px;
+    }
+}
+
+@media #{$sr-320} { 
+    .title {
+        font-size: 26px;
+        max-width: 320px;
+    }
+
+    .title-small { 
+        width: auto;
+        font-size: 28px;
+    }
+
+    .title-big {
+        font-size: 40px;
+        line-height: 45px;
+    }
+}

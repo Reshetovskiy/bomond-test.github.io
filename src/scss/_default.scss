@@ -10,6 +10,12 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background: #b7251c url('../img/point-and-snow.png');
+    background-repeat: repeat-y;
+    // background-position: 300px;
+    overflow-x: hidden;
+    color: #fff;
+    height: auto;
     &.modal--open {
         width: 100vw;
         height: 100vw;
@@ -27,4 +33,8 @@ main {
 
 .footer {
     flex: 0 0 auto;
+}
+
+button {
+    cursor: pointer;
 }

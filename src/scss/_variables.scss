@@ -1,6 +1,7 @@
 // @~ Media
 
-$sr-320: "screen and (max-width: 567px)";
+$sr-320: "screen and (max-width: 767px)";
+$sr-768: "screen and (min-width: 768px) and (max-width: 1159px)";
 $sr-1300: "screen and (min-width: 1300px)";
 
 // @~ Colors
@@ -10,7 +11,7 @@ $grey: #eee;
 
 // @~ Fonts
 
-$font: "", sans-serif, arial;
+$font: 'Montserrat', sans-serif;
 
 // @~ z-indexes: Example: z-index: z('moda');
 
